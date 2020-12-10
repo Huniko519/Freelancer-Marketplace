@@ -1,0 +1,713 @@
+/* ==========================================================================
+   The Kafe - Ultimate Freelance Marketplace Template
+   ========================================================================== */
+/*
+* Author Name: TheMashaBrand
+* Author URI: http://themeforest.net/user/themashabrand
+* Website: http://www.themashabrand.com 
+*/
+
+/* ------------------------------------------------------------------- */
+/* Table of Contents
+---------------------------------------------------------------------- 
+1. Reset & Basics                   - Line 28
+2. Base Styles                      
+    - Typogrphy Section             - Line 85
+	- Links Section                 - Line 127
+	- Lists Section                 - Line 157
+	- Kafe Button Section           - Line 176
+3. Job List 
+    - Category List Section         - Line 297
+	- Search Section                - Line 336
+	- Job Section                   - Line 394
+	- Pagination Section            - Line 526
+	- Media Queries                 - Line 576
+4. Sidebar - Affix Section          - Line 638
+5. Form Signup                      - Line 669
+
+---------------------------------------------------------------------- */ 
+
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; 
+}
+	
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none; 
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; 
+}
+
+.no-select {
+  user-select: none;
+  -o-user-select:none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none; 
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+html, body {
+  overflow-x: hidden;
+  text-align: left;
+  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+ -webkit-text-size-adjust: 100%;
+}
+
+/* ------------------------------------------------------------------- */
+/* Typography
+---------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2C3E50;
+  letter-spacing: 1px;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { 
+  font-weight: inherit; 
+}
+
+h1 { font-size: 30px; line-height: 54px; }
+h2 { font-size: 24px; line-height: 48px; }
+h3 { font-size: 22px; line-height: 44px; }
+h4 { font-size: 18px; line-height: 36px; }
+h5 { font-size: 16px; line-height: 28px; }
+h6 { font-size: 14px; line-height: 24px; }
+
+p { 
+  font-family: 'Varela Round', sans-serif;
+  line-height: 24px;
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+p img { margin: 0; }
+p.lead { font-size: 21px; line-height: 27px; color: #555;  }
+
+em { font-style: italic; }
+strong { font-weight: 700; color: #333; }
+small { font-size: 80%; }
+
+hr.mint { 
+  background: #16A085;
+  border: 0;
+  width: 100px;
+  height: 3px;
+  clear: both;
+}
+
+/* ------------------------------------------------------------------- */
+/* Links
+---------------------------------------------------------------------- */
+a { 
+  color: #fff; 
+  text-decoration: none; 
+  outline: 0; 
+  -webkit-transition:0.5s all ease;
+  -moz-transition:0.5s all ease;
+  -o-transition:0.5s all ease;
+  -ms-transition:0.5s all ease;
+  transition:0.5s all ease; 
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+  text-decoration: none;
+  outline: 0;
+  color: #00C4CF !important;
+  -webkit-transition:0.5s all ease;
+  -moz-transition:0.5s all ease;
+  -o-transition:0.5s all ease;
+  -ms-transition:0.5s all ease;
+  transition:0.5s all ease;
+}
+
+p a, p a:visited { line-height: inherit; }
+
+/* ------------------------------------------------------------------- */
+/* Lists
+---------------------------------------------------------------------- */
+ul, ol { margin: 0; }
+ul { list-style: none outside; }
+ol { list-style: decimal; }
+ol, ul.square, ul.circle, ul.disc { margin-left: 10px; }
+ul.square { list-style: square outside; color: #3d464d;}
+ul.circle { list-style: circle outside; color: #3d464d; }
+ul.disc { list-style: disc outside; color: #3d464d;}
+ul ul, ul ol,
+ol ol, ol ul {}
+ul ul li, ul ol li,
+ol ol li, ol ul li { line-height: 24px;}
+li { line-height: 24px; }
+ul.large li { line-height: 21px; }
+li p { line-height: 24px; }
+
+/* ------------------------------------------------------------------- */
+/* Kafe Button Styles
+---------------------------------------------------------------------- */
+
+.kafe-btn{
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1.4;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+ 
+  border-radius: 4px;
+ 
+  khtml-user-select: none;
+  webkit-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+ 
+  -moz-transition: background, 0.3s;
+  -0-transition: background, 0.3s;
+  webkit-transition: background, 0.3s;
+  transition: background, 0.3s;
+}
+
+
+
+
+.kafe-btn-default{
+  font-family: 'Abhaya Libre', serif;
+  letter-spacing: 1px;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+  border-color: #fff;
+  margin-top: 10px;
+  padding: 13px 31px;
+}
+
+.kafe-btn-default-new{
+  font-family: 'Abhaya Libre', serif;
+  letter-spacing: 1px;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+  border-color: #fff;
+  padding: 5px 10px;
+}
+.kafe-btn-default-mint{
+  font-family: 'Abhaya Libre', serif;
+  letter-spacing: 1px;
+  color: #00C4CF;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+  border-color: #00C4CF;
+  padding: 13px 31px;
+}
+.kafe-btn-default-mint:hover,
+.kafe-btn-default-mint:focus {
+  background-color: #00C4CF;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.kafe-btn-default-small{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 14px;
+  padding: 6px 11px;
+  letter-spacing: 1px;
+  color: #00C4CF;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+  border-color: #00C4CF;
+}
+.kafe-btn-default-small:hover {
+  background-color: #00C4CF;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.kafe-btn-mint{
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 700;
+  font-size: 14px;
+
+  
+  padding: 13px 31px;
+  color: #fff !important;
+  background: #00C4CF; 
+  letter-spacing: 1px; 
+}
+
+
+.kafe-btn-mint-small{
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 11px;
+  color: #fff;
+  background: #00C4CF; 
+  letter-spacing: 1px; 
+}
+
+.kafe-btn-danger{
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 700;
+  font-size: 14px;
+
+  
+  padding: 13px 31px;
+  color: #fff !important;
+  background: #FA5050; 
+  letter-spacing: 1px; 
+}
+
+.kafe-btn-danger-small{
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 6px 11px;
+  color: #fff;
+  background: #FA5050; 
+  letter-spacing: 1px; 
+}
+
+.kafe-btn-default:hover, .kafe-btn-default-new:hover {
+  background-color: #fff;
+  color: #2C3E50 !important;
+  text-decoration: none;
+}
+.kafe-btn-danger:hover, .kafe-btn-danger-small:hover {
+  color: #fff !important;
+  background: #ba3434; 
+  text-decoration: none;
+}
+
+.kafe-btn-mint:hover,
+.kafe-btn-mint:focus {
+  color: #fff !important;
+  background: #019da5; 
+  text-decoration: none;
+}
+
+.kafe-btn-mint-small:hover,
+.kafe-btn-mint-small:focus {
+  color: #fff !important;
+  background: #019da5; 
+  text-decoration: none;
+}
+
+/* ------------ Kafe Btn Red ---------- */
+.kafe-btn-red{
+ font-family: "Poppins", sans-serif;
+ font-weight: 700;
+ font-size: 14px;
+ padding: 13px 31px;
+ color: #fff !important;
+ background: #f35f72; 
+  letter-spacing: 1px; 
+}
+.kafe-btn-red:hover,
+.kafe-btn-red:focus {
+  color: #fff !important;
+  background: #da5566; 
+  text-decoration: none;
+}
+.kafe-btn-red-small{
+ font-family: "Poppins", sans-serif;
+ font-weight: 700;
+ font-size: 14px;
+ padding: 5px 10px;
+ color: #fff !important;
+ background: #f35f72; 
+  letter-spacing: 1px; 
+}
+.kafe-btn-red-small:hover,
+.kafe-btn-red-small:focus {
+  color: #fff !important;
+  background: #da5566; 
+  text-decoration: none;
+}
+
+/* ------------ Kafe Btn Yellow ---------- */
+.kafe-btn-yellow{
+ font-family: "Poppins", sans-serif;
+ font-weight: 700;
+ font-size: 14px;
+ padding: 13px 31px;
+ color: #fff !important;
+ background: #febe42; 
+  letter-spacing: 1px; 
+}
+.kafe-btn-yellow:hover,
+.kafe-btn-yellow:focus {
+  color: #e4ab3b !important;
+  border: 1px solid #e4ab3b;
+  background: #ffffff; 
+  text-decoration: none;
+}
+.kafe-btn-yellow-small{
+ font-family: "Poppins", sans-serif;
+ font-weight: 700;
+ font-size: 14px;
+ padding: 5px 10px;
+ color: #fff !important;
+ background: #febe42; 
+  letter-spacing: 1px; 
+}
+.kafe-btn-yellow-small:hover,
+.kafe-btn-yellow-small:focus {
+  color: #fff !important;
+  background: #e4ab3b; 
+  text-decoration: none;
+}
+
+
+/* ------------ Btns ---------- */
+.btn-success {
+color: #ffffff !important;
+background-color: #00C4CF !important;
+border-color: #00C4CF !important;
+}
+.btn-success span{
+color: #ffffff !important;
+}
+.btn-danger {
+color: #ffffff !important;
+background-color: #dd4b39 !important;
+border-color: #dd4b39 !important;
+}
+.btn-danger span{
+color: #ffffff !important;
+}
+.btn-xs {
+padding: 3px 5px !important;
+font-size: 12px;
+line-height: 1.5;
+border-radius: 3px;
+color: #ffffff !important;
+}
+
+.btn-facebook {
+ font-family: 'Abhaya Libre', serif;	
+ color: #fff !important;
+ background-color: #335397;
+ border-color: #335397;
+ font-weight: 700;
+ font-size: 14px;
+ padding: 13px 31px;
+ letter-spacing: 1px; 
+}
+.btn-facebook:hover {
+ color: #fff !important;
+ text-decoration: none;
+}
+.btn-twitter {
+ font-family: 'Abhaya Libre', serif;
+ color: #fff !important;
+ background-color: #00c7f7;
+ border-color: #00c7f7;
+ font-weight: 700;
+ font-size: 14px;
+ padding: 13px 31px;
+ letter-spacing: 1px;
+}
+.btn-twitter:hover {
+ color: #fff !important;
+ text-decoration: none;
+}
+.btn-google-plus {
+ font-family: 'Abhaya Libre', serif;
+ color: #fff !important;
+ background: #dd4b39;
+ border-color: #dd4b39;
+ font-weight: 700;
+ font-size: 14px;
+ padding: 13px 31px;
+ letter-spacing: 1px;
+}
+.btn-google-plus:hover {
+ color: #fff !important;
+ text-decoration: none;
+}
+
+body.greybg {
+  overflow-x: hidden;
+  background-color:#EEEEEE;
+}
+
+.col-lg-8.white-2{
+  display: block;
+  max-width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+  box-shadow: 0 0 0 1 rgba(0, 0, 0, 0.6);
+}
+
+.white-blogpage,
+.col-lg-8.white{
+  position: relative;
+  display: block;
+  max-width: 100%;
+  margin-top: -80px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 0 1 rgba(0, 0, 0, 0.6);
+}
+
+.full-width{
+  width: 100%;
+}
+
+/* ------------------------------------------------------------------- */
+/* Section Section
+---------------------------------------------------------------------- */
+.section-padding {
+    padding: 80px 0;
+}
+.section-title h1 {
+	font-family: 'Abhaya Libre', serif;
+    font-size: 28px;
+    color: #00C4CF;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 15px 0px 5px 0px;
+	font-weight: 700;
+}
+.section-title-fluffs h1 {
+	font-family: 'Abhaya Libre', serif;
+    font-size: 18px;
+    color: #505050;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0px;
+}
+.section-title-new h1 {
+	font-family: 'Abhaya Libre', serif;
+    font-size: 28px;
+    color: #00C4CF;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 5px 0px 25px 0px;
+	font-weight: 700;
+}
+.section-title-left h1 {
+	font-family: 'Abhaya Libre', serif;
+    font-size: 16px;
+    color: #00C4CF !important;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 30px 0 40px 0px;
+}
+@media(max-width:768px) {
+	.section-title h1 {
+		font-size: 18px
+	}	
+}
+
+/* ------------------------------------------------------------------- */
+/* Separator Section
+---------------------------------------------------------------------- */
+.separator_wrapper {
+    margin-bottom: 30px;
+}
+.separator_wrapper::after,.separator_wrapper::before {
+    background-color: #f96a74;
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 70px;
+    height: 1px;
+    margin-top: -6px;
+}
+.separator_first_circle {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 3px solid #f96a74;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+separator_second_circle {
+    float: left;
+    width: 4px;
+    height: 4px;
+    background-color: #f96a74;
+    margin-top: 2px;
+    margin-left: 2px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.m-15{
+ margin-bottom: 15px;
+}
+.m-20{
+ margin-bottom: 20px;
+}
+.m-30{
+ margin-bottom: 30px;
+}
+.m-t-30{
+ margin-top: 30px;
+}
+/* ------------------------------------------------------------------- */
+/* Label Section
+---------------------------------------------------------------------- */
+.label-success {
+    font-family: 'Abhaya Libre', serif;
+    background: #00C4CF !important;
+    margin-bottom: 5px;
+    font-size: 16px !important;
+	padding: 10px !important;
+    color: #fff !important;
+    letter-spacing: 1px;
+}
+.label-success-small {
+    font-family: 'Abhaya Libre', serif;
+    background: #00C4CF !important;
+    margin-bottom: 0px;
+    font-size: 13px !important;
+	padding: 3px !important;
+    color: #fff !important;
+    letter-spacing: 1px;
+}
+.label-mint {
+ background: none !important;
+ color: #00C4CF !important;
+ border: 1px solid #00C4CF;
+}
+.label-danger {
+ background: none !important;
+ color: #dd4b39 !important;
+ border: 1px solid #dd4b39;
+}
+
+
+.earnings{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 6px 11px;
+  color: #fff;
+  background: #f1be5a; 
+  letter-spacing: 1px; 
+}
+.earnings:hover,
+.earnings:focus {
+  color: #fff !important;
+  background: #f1be5a; 
+  text-decoration: none;
+}
+
+
+.paypal{
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1.4;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+ 
+  border-radius: 4px;
+ 
+  khtml-user-select: none;
+  webkit-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+ 
+  -moz-transition: background, 0.3s;
+  -0-transition: background, 0.3s;
+  webkit-transition: background, 0.3s;
+  transition: background, 0.3s;
+}
+.button{
+ font-family: "Poppins", sans-serif;
+ font-weight: 700;
+ font-size: 14px;
+ padding: 13px 31px;
+ color: #fff !important;
+ background: #f35f72; 
+  letter-spacing: 1px; 
+}
+.button:hover,
+.button:focus {
+  color: #fff !important;
+  background: #da5566; 
+  text-decoration: none;
+}
+.alert-info{
+	background: #f1be5a !important;
+	border: #f1be5a !important;
+	color: #ffffff !important;
+	margin-bottom: 30px !important;
+}
+
+
+.razorpay-payment-button{
+ font-family: "Poppins", sans-serif;
+ font-weight: 700;
+	color: #fff;
+	background-color: #7266ba;
+	border-color: #7266ba;
+	font-size: 14px;
+ padding: 13px 31px;
+}
+
+.mb-3{
+ margin-bottom: 30px !important;	
+}
+.mt-7{
+ margin-top: 70px !important;	
+}
+.mt-4{
+ margin-top: 40px !important;	
+}
+.mt-2{
+ margin-top: 20px !important;	
+}

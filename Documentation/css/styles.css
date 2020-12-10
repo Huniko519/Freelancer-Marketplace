@@ -1,0 +1,148 @@
+body{
+	background:#eee;
+	color: #818b8a;
+}
+
+strong{
+    color:#555;
+}
+
+#sidenav hr{
+    margin:5px 10px;
+}
+
+td#cyan2 {
+    background:#8AAAD9;
+}
+
+td#cyan {
+    background:#74C7D5;
+}
+
+td#green {
+    background:#21B799;
+}
+
+td#grass {
+    background:#A2CE7E;
+}
+
+td#red {
+    background:#F05557;
+}
+
+td#orange {
+    background:#EFAE49;
+}
+
+td#purple {
+    background:#9661A8;
+}
+
+td#pink {
+    background:#F1678D;
+}
+
+td#light-green{
+    background:#36D9C3;
+}
+
+td#blue{
+    background:#38A5DB;
+}
+
+td#yellow{
+    background:#FBDF29;
+}
+
+td#yellow-orange{
+    background:#FAC928;
+}
+.jumbotron {
+    background:linear-gradient(
+      rgba(34,34,34,0.7), 
+      rgba(34,34,34,0.7)
+    ),url(../assets/best.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color:#654654;
+    color:#fff;
+    margin-bottom:80px;
+}
+
+.panel{
+    border:none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+	margin-bottom:100px;
+} 
+
+.panel-body{
+    padding:50px;
+}
+
+.panel-heading {
+    padding:15px 50px;
+    text-align:center;
+}
+
+.panel-title{
+    font-size:21px;
+}
+
+#sidebar .panel-heading {
+    padding:15px 30px;
+    text-align:left;
+}
+
+
+#sidebar .panel-body{
+    padding:15px 0;
+}
+
+#sidebar .affix {
+  position: static;
+}
+
+.sidenav > li > a {
+  display: block;
+  color: #818b8a;
+  padding: 5px 30px;
+}
+.sidenav > li > a:hover,
+.sidenav > li > a:focus {
+  text-decoration: none;
+  background-color: #fafafa;
+}
+.sidenav > .active > a,
+.sidenav > .active:hover > a,
+.sidenav > .active:focus > a {
+  font-weight: bold;
+  color: #18BC9C;
+  background-color: transparent;
+}
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+  /* Widen the fixed sidebar */
+  #sidebar .affix,
+  #sidebar .affix-bottom {
+    width: 213px;
+  }
+  #sidebar .affix {
+    position: fixed; /* Undo the static from mobile first approach */
+    top: 50px;
+  }
+  #sidebar .affix-bottom {
+    position: absolute; /* Undo the static from mobile first approach */
+  }
+}
+@media (min-width: 1200px) {
+  /* Widen the fixed sidebar again */
+  #sidebar .affix-bottom,
+  #sidebar .affix {
+    width: 263px;
+  }
+}

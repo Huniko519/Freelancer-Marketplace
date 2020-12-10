@@ -1,0 +1,238 @@
+
+/* ------------------------------------------------------------------- */
+/* Login Section
+---------------------------------------------------------------------- */
+.bg-search{
+  background-size: cover;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  color: #fff;
+  height: 40vh;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.banner-login{
+ padding: 40px 0px;	
+ background: #f9f9f9;
+}
+.banner-row{
+ margin-top: 40px;
+}
+/* ==========================================================================
+	#Form Sign Up
+========================================================================== */
+.main-signup { 
+  padding-top: 20px; 
+  padding-bottom: 60px; 
+}
+
+.form-sign .form-head { 
+  text-align: center; 
+}
+
+.form-sign .form-head h3 { 
+  display: inline-block; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #f1be5a;
+}
+
+.form-sign .form-body { 
+  padding-top: 29px; 
+}
+
+.form-sign .field { 
+  width: 100%; 
+  height: 57px; 
+  padding: 10px 23px 10px 31px; 
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1; 
+  color: #868585;
+  border: 0; 
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+ box-shadow: 0 2px 12px rgba(0,0,0,.12);
+}
+
+.form-sign ::-webkit-input-placeholder { 
+  /* WebKit browsers */
+  color: #899797;
+}
+
+.form-sign :-moz-placeholder { 
+  /* Mozilla Firefox 4 to 18 */
+  color: #899797;
+  opacity:  1;
+} 
+
+.form-sign ::-moz-placeholder { 
+  /* Mozilla Firefox 19+ */
+  color: #899797;
+  opacity:  1;
+}
+
+.form-sign :-ms-input-placeholder { 
+  /* Internet Explorer 10+ */
+  color: #899797;
+}
+
+.form-sign .form-row { 
+  position: relative; 
+  padding-bottom: 10px; 
+}
+
+.form-sign .form-foot { 
+  padding-top: 30px; 
+}
+
+.form-btn { 
+  width: 100%; 
+  height: 57px; 
+  border: 0; 
+  border-radius: 29px; 
+  background: #FFFFFF !important; 
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 700;
+  font-size: 14px; 
+  color: #899797; 
+  text-transform: uppercase; 
+  letter-spacing: 0.15em; 
+  cursor: pointer; 
+}
+.banner-login .kafe-btn-mint { 
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px; 
+  color: #fff; 
+}
+
+.form-btn:hover { 
+  background: #FFFFFF; 
+}
+
+.form-sign .form-foot a.more-link { 
+  display: inline-block; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14px; 
+  color: #7a7b7c; 
+  margin: 35px 0 0; 
+}
+
+.form-sign .form-foot a.more-link:hover { 
+  text-decoration: none; 
+}
+
+.form-sign .checkbox {
+ margin-top: 10px;
+ margin-bottom: 10px;
+ text-align: left;
+}
+.form-sign .checkbox label {
+ margin-bottom: 0;
+ font-family: 'Abhaya Libre', serif;
+ color: #fff !important;	
+ font-size: 18px !important;
+}
+.form-sign .checkbox label a{
+ color: #00C4CF !important;	
+}
+
+/*Material Switch*/
+.material-switch{
+  padding: 10px 0 20px 0px;
+}
+
+.material-switch > input[type="checkbox"] {
+    display: none;   
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+	left: -2px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 60px;
+}
+.material-switch > label::after {
+    background: #00C4CF !important;
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 40px;
+}
+
+.material-switch span.one{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #7a7b7c;
+  padding-left: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 30px;
+}
+.material-switch span{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  position: relative;
+  left: 25px;
+  color: #7a7b7c;
+}
+.list-group li.list-group-item .material-switch span{
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1A1A1A !important;
+}
+
+.list-group li.list-group-item .material-switch span.pull-right{
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  position: relative;
+  left: -10px;
+  color: #1A1A1A !important;
+}
+
+.material-switch > .label-success-mint{
+  background: #00C4CF !important;
+}
